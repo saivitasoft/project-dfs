@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { IndexpageComponent } from './admin/indexpage/indexpage.component';
 import { LoginComponent } from './admin/login/login.component';
 import { RegisterComponent } from './admin/register/register.component';
+import { UserloginComponent } from './user/userlogin/userlogin.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { RegisterComponent } from './admin/register/register.component';
     IndexpageComponent,
     LoginComponent,
     RegisterComponent,
+    UserloginComponent,
     
   ],
   imports: [
