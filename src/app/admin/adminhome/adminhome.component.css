@@ -1,0 +1,5 @@
+.img{
+    background-image: url('src/assets/image/bird1.jpg');
+    height:800px;
+    background-repeat: no-repeat;
+    background-size: cover;}

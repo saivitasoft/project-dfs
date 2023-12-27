@@ -1,10 +1,4 @@
-#row1{
-    padding:1px;
-    opacity:0.5;
+.card{
+    background: transparent;
 }
 
-
-.input-field{
-    padding:6px;
-
-}
