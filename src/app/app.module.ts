@@ -13,6 +13,11 @@ import { ViewphotoComponent } from './admin/viewphoto/viewphoto.component';
 import { UserDetailsComponent } from './admin/user-details/user-details.component';
 import { UserrequestComponent } from './admin/userrequest/userrequest.component';
 import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
+import { UserhomeComponent } from './user/userhome/userhome.component';
+import { UserprofileComponent } from './user/userprofile/userprofile.component';
+import { UserphotoComponent } from './user/userphoto/userphoto.component';
+import { UploadphotosComponent } from './user/uploadphotos/uploadphotos.component';
+import { RequeststatusComponent } from './user/requeststatus/requeststatus.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +31,12 @@ import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
     ViewphotoComponent,
     UserDetailsComponent,
     UserrequestComponent,
-    AdminhomeComponent
+    AdminhomeComponent,
+    UserhomeComponent,
+    UserprofileComponent,
+    UserphotoComponent,
+    UploadphotosComponent,
+    RequeststatusComponent
 
     
   ],
