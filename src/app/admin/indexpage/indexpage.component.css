@@ -1,8 +1,10 @@
 .img{
     background-image: url('src/assets/image/cam5.jpg');
-    height:630px;
+    width:auto;
+    height:750px;
     background-repeat: no-repeat;
-    background-size: cover;}
+    background-size: cover;
+}
 
     #row1{
         padding:1px;
@@ -10,4 +12,21 @@
     }
     
     
-    
+    /* form {
+        max-width: 300px;
+        margin: 0 auto;
+        font-family: Arial, sans-serif;
+      }
+      
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      
+      input[type="text"],
+      input[type="password"],
+      input[type="submit"],
+      input[type="radio"],
+      label {
+        margin-bottom: 10px;
+      } */

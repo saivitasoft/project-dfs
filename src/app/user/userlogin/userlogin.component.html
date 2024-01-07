@@ -1,6 +1,7 @@
 <div class="container-fluid">
   <div class="row" id="row1">
-   <div class="col-sm-6 p-0" style="margin-top:160px;margin-left:455px;" >
+   <div class="col-sm-6 p-0" style="margin-top:160px" >
+    <form [formGroup]="userlogin">
      <div class="card"  >
       <!-- style="background-color: #f7ca62	;" -->
       <div class="header" style="text-align: center;"><h2>User signin</h2></div>
@@ -8,14 +9,14 @@
          <div class="col-sm-10">
               <div class="input-group mb-3">
                   <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
-                  <input type="text" class="form-control" placeholder="Username">
+                  <input type="text" class="form-control" placeholder="Username" formControlName="firstname">
                   </div>
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1"><i class="bi bi-lock-fill"></i></span>
-                  <input type="password" class="form-control" placeholder="password">
+                  <input type="mobileno" class="form-control" placeholder="password" formControlName="mobileno">
                 </div>
                 <div class="row">
-                  <button class="btn btn-warning ms-auto w-25" routerLink="/userhome">login</button>
+                  <button class="btn btn-warning ms-auto w-25" (click)="userslogin()" >login</button>
                  </div> 
                  <div class="row">
                  <p style="color:black;">you have not a account<span><a href="register">Signup</a></span></p> 
@@ -23,6 +24,7 @@
       </div>
      </div>
    </div>
+  </form>
    <div class="col-sm-6">
    </div>   
   </div>

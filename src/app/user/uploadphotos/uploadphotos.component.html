@@ -1,13 +1,14 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-4" style="margin-top:80px;margin-left:450px;">
+          <form [formGroup]="uploaddata">
             <div class="card">
-               <div class="card-header" style="text-align: center;font-size:25px;"><b>User Register</b></div>
+               <div class="card-header" style="text-align: center;font-size:25px;"><b>upload</b></div>
                <div class="card-body">
                   <div class="row">
                    <div class="col-sm-6">
                        <div class="form-floating mb-3 mt-3">
-                        <select name="size" id="size" class="form-control border-0">
+                        <select name="size" id="size" class="form-control border-0" formControlName="photosize">
                           <option value="4x6">4x6</option>
                           <option value="9x12">9x12</option>
                         </select>
@@ -16,7 +17,7 @@
                    </div>
                    <div class="col-sm-6">
                        <div class="form-floating mb-3 mt-3">
-                           <input type="number" class="form-control border-0" placeholder="Enterlastname" name="Lastname">
+                           <input type="number" class="form-control border-0"   formControlName="photoprice"        placeholder="Enterlastname" name="Lastname">
                            <label for=""><b>price</b></label>
                          </div>
                    </div>
@@ -24,13 +25,13 @@
                   <div class="row">
                    <div class="col-sm-6">
                        <div class="form-floating mb-3 mt-3">
-                           <input type="number" class="form-control border-0" placeholder="Entermobileno" name="mobileno">
+                           <input type="number" class="form-control border-0"  formControlName="noofcopiece"         placeholder="Entermobileno" name="mobileno">
                            <label for=""><b>noofcopiece</b></label>
                          </div>
                    </div>
                    <div class="col-sm-6">
                        <div class="form-floating mb-3 mt-3">
-                           <input type="number" class="form-control border-0" placeholder="Enter email" name="email">
+                           <input type="number" class="form-control border-0"  formControlName="totalamount"         placeholder="Enter email" name="email">
                            <label for=""><b>totalamount</b></label>
                          </div>
                    </div>
@@ -38,21 +39,22 @@
                   <div class="row">
                    <div class="col-sm-6">
                        <div class="form-floating mb-3 mt-3">
-                           <input type="file" class="form-control border-0" placeholder="Address">
+                           <input type="file" class="form-control border-0" placeholder="Address" formControlName="image">
                            <label for=""><b>photo</b></label>
                          </div>
                    </div>
                   </div>  
                   <div class="" style="text-align: center;">
 
-                    <button type="button" class="btn btn-primary ms-auto w-25" >update</button>
+                    <button type="button" class="btn btn-primary ms-auto w-25"(click)="upload()" >update</button>
                         
 
                   </div>
        
                      
                </div>
-            </div>   
+            </div> 
+          </form>  
            </div>
     </div>
     

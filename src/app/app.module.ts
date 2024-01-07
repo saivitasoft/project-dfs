@@ -18,6 +18,9 @@ import { UserprofileComponent } from './user/userprofile/userprofile.component';
 import { UserphotoComponent } from './user/userphoto/userphoto.component';
 import { UploadphotosComponent } from './user/uploadphotos/uploadphotos.component';
 import { RequeststatusComponent } from './user/requeststatus/requeststatus.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,11 @@ import { RequeststatusComponent } from './user/requeststatus/requeststatus.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

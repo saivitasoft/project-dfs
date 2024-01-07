@@ -5,13 +5,15 @@
              <div class="mt-3">
                  <table class="table text-center">
                      <tr>
-                        <th>s.no</th>
+                        <th>id</th>
                         <th>size</th>
                         <th>price</th>
                         <th>action</th>
                     </tr>
-                     <tr>
-                         
+                     <tr *ngFor="let p of photoall">
+                        <td>{{p._id}}</td>
+                        <td>{{p.photosize}}</td>
+                        <td>{{p.photoprice}}</td> 
                      </tr>
                          
                      </table>
