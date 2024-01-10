@@ -5,12 +5,11 @@
             <div class="card">
                <div class="card-header" style="text-align: center;font-size:25px;"><b>upload</b></div>
                <div class="card-body">
-                  <div class="row">
+                  <div class="row" *ngFor="let p of photos" >
                    <div class="col-sm-6">
                        <div class="form-floating mb-3 mt-3">
-                        <select name="size" id="size" class="form-control border-0" formControlName="photosize">
-                          <option value="4x6">4x6</option>
-                          <option value="9x12">9x12</option>
+                        <select name="size" id="size" class="form-control border-0" formControlName="photosize" (change)="selected($event)">
+                          <option *ngFor="let p of photos" value="{{p.photosize}}">{{p.photosize}}</option>
                         </select>
                         <label for=""><b>photosize</b></label>
                          </div>
@@ -18,7 +17,7 @@
                    <div class="col-sm-6">
                        <div class="form-floating mb-3 mt-3">
                            <input type="number" class="form-control border-0"   formControlName="photoprice"        placeholder="Enterlastname" name="Lastname">
-                           <label for=""><b>price</b></label>
+                           <label for=""><b>{{p.photoprice}}</b></label>
                          </div>
                    </div>
                   </div> 

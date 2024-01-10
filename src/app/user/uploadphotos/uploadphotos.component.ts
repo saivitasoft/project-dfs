@@ -8,25 +8,45 @@ import { DfsService } from 'src/app/dfs.service';
   templateUrl: './uploadphotos.component.html',
   styleUrls: ['./uploadphotos.component.css']
 })
-export class UploadphotosComponent implements OnInit{
-
-  uploaddata!:FormGroup
-  constructor( private api:DfsService,private data:FormBuilder, private user:Router){}
+export class UploadphotosComponent implements OnInit {
+  photos: any;
+  seletedSize:any
+  uploaddata!: FormGroup
+  constructor(private api: DfsService, private data: FormBuilder, private user: Router) { }
   ngOnInit(): void {
+    this.api.viewallphoto().subscribe((res: any) => {
+      this.photos = res;
+      console.log(res)
+
+    })
+this.photos.map((a:any)=>{
+  if(a.photosize === this.seletedSize){
+
+  }
+})
     this.uploaddata = this.data.group({
-      photosize:[""],
-      photoprice:[""],
-      noofcopiece:[""],
-      totalamount:[""],
-      image:[""],
-      status:['pending']
+      photosize: [""],
+      photoprice: [""],
+      noofcopiece: [""],
+      totalamount: [""],
+      image: [""],
+      status: ['pending']
     })
   }
 
-  upload(){
-    this.api.uploaddetails(this.uploaddata.value).subscribe((res:any)=>{
+  upload() {
+    this.api.uploaddetails(this.uploaddata.value).subscribe((res: any) => {
       console.log(res)
     })
   }
+
+  selected(event: any) {
+    this.seletedSize = event.target.value;
+    console.log(this.seletedSize, "size");
+    
+  }
+
+
+
 
 }
