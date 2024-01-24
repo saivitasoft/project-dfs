@@ -17,28 +17,34 @@ import { UploadphotosComponent } from './user/uploadphotos/uploadphotos.componen
 import { RequeststatusComponent } from './user/requeststatus/requeststatus.component';
 
 const routes: Routes = [
-  {path:'',component:IndexpageComponent,children:[
-    {path:'adminlogin',component:LoginComponent},
-    {path:'home',component:HomepageComponent},
-    {path:'userlogin',component:UserloginComponent},
-    {path:'register',component:RegisterComponent}]},
-    {path:'adminhome',component:AdminhomeComponent,children:[
-      {path:'photoprice',component:PhotopriceComponent},
-      {path:'viewphoto',component:ViewphotoComponent},
-      {path:'userdetails',component:UserDetailsComponent},
-      {path:'userrequest',component:UserrequestComponent}
-    ]},
-    {path:'userhome',component:UserhomeComponent,children:[
-      {path:'userprofile',component:UserprofileComponent},
-      {path:'userphoto',component:UserphotoComponent},
-      {path:'upload',component:UploadphotosComponent},
-      {path:'request',component:RequeststatusComponent}
-    ]}
-  
-  
+  {
+    path: '', component: IndexpageComponent, children: [
+      { path: 'adminlogin', component: LoginComponent },
+      { path: 'home', component: HomepageComponent },
+      { path: 'userlogin', component: UserloginComponent },
+      { path: 'register', component: RegisterComponent }]
+  },
+  {
+    path: 'adminhome', component: AdminhomeComponent, children: [
+      { path: 'photoprice', component: PhotopriceComponent },
+      { path: 'viewphoto', component: ViewphotoComponent },
+      { path: 'userdetails', component: UserDetailsComponent },
+      { path: 'userrequest', component: UserrequestComponent }
+    ]
+  },
+  {
+    path: 'userhome', component: UserhomeComponent, children: [
+      { path: 'userprofile', component: UserprofileComponent },
+      { path: 'userphoto', component: UserphotoComponent },
+      { path: 'upload', component: UploadphotosComponent },
+      { path: 'request', component: RequeststatusComponent }
+    ]
+  }
+
+
 ]
 
-  
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

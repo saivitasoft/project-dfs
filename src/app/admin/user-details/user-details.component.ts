@@ -15,6 +15,7 @@ export class UserDetailsComponent implements OnInit {
       console.log(res,'sss')
        this.alluser = res
      })
+     
   }
 
 }

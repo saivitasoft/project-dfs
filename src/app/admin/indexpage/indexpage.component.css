@@ -1,6 +1,5 @@
 .img{
     background-image: url('src/assets/image/cam5.jpg');
-    width:auto;
     height:750px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -8,7 +7,9 @@
 
     #row1{
         padding:1px;
-        opacity:0.5;
+      /* background: transparent;
+      opacity:5.5px; */
+      background-color:#c1c2c2;
     }
     
     

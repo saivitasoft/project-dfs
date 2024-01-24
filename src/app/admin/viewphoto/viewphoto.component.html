@@ -1,29 +1,16 @@
 <div class="container-fluid">
     <div class="row">
-     <div class="col-sm-4 mt-5 " style="margin: auto;">
-         <div class="card">
-             <div class="mt-3">
-                 <table class="table text-center">
-                     <tr>
-                        <th>id</th>
-                        <th>size</th>
-                        <th>price</th>
-                        <th>action</th>
-                    </tr>
-                     <tr *ngFor="let p of photoall">
-                        <td>{{p._id}}</td>
-                        <td>{{p.photosize}}</td>
-                        <td>{{p.photoprice}}</td> 
-                     </tr>
-                         
-                     </table>
-             </div>
-         </div>
-         
-     </div>
-    </div> 
- </div>
- 
- 
- 
- 
+        <div class="col-sm-3 mt-5 " *ngFor="let p of photoall index  as i ">
+            <div class="card">
+                <div class="card-body">
+                    <p>{{i+1}}</p>
+                    <p>{{p.photosize}}</p>
+                    <p>{{p.photoprice}}</p>
+                    <p class="btn btn-danger" (click)="imgsizedeleted(p._id)">delete</p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

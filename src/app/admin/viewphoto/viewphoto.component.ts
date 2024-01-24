@@ -15,7 +15,20 @@ export class ViewphotoComponent implements OnInit {
   this.api.viewallphoto().subscribe((res:any)=>{
     console.log(res)
     this.photoall=res
-  })
-  }
+    
+  });
 
+  }
+  imgsizedeleted(id:any){
+    this.api.deleteprice(id).subscribe((res:any)=>{
+      console.log(res,"deleted")
+      window.location.reload()
+      if(this.api){
+        alert( 'user dleted succesfully')
+      }
+      else{
+        alert('user  not dleted')
+      }
+    })
+  }
 }

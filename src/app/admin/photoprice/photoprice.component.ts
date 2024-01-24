@@ -26,11 +26,12 @@ export class PhotopriceComponent implements OnInit{
     this.api.photoprice(this.photodetails.value).subscribe((res: any) => {
       console.log(res)
       if (res) {
-        alert('photo size add');
+        alert('photo size&price add');
         this.home.navigate(['/adminhome/viewphoto'])
+        
       }
       else {
-        alert('photo size not add')
+        alert('photo size&price not add')
 
       }
 

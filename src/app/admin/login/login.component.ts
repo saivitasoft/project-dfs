@@ -20,15 +20,20 @@ export class LoginComponent implements OnInit {
     })
   }
   adminlogin() {
-    this.api.adminlogin(this.AdminLogin.value).subscribe((res: any) => {
+    this.api.adminLogin(this.AdminLogin.value).subscribe((res: any) => {
+      console.log(res);
+    localStorage.setItem('token',res.token)
+
       if (res) {
         alert('user login successfully');
         this.home.navigate(['/adminhome'])
+
       }
       else {
         alert('user login failed')
 
       }
+
 
     });
     

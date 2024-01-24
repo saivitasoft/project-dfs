@@ -1,22 +1,13 @@
  <div class="container-fluid">
-    <div class="row">
-     <div class="col-sm-3 mt-5 " style="margin-left:450px;">
+    <div class="row"  >
+     <div class="col-sm-3 mt-5 " *ngFor="let p of photoall index as i">
          <div class="card">
-             <div class="mt-3">
-                 <table class="table text-center">
-                     <tr>
-                         <th>s.no</th>
-                         <th>size</th>
-                         <th>price</th>
+             <div class="card-body">
+                     
+                        <p><b>s.no:</b>{{i+1}}</p>
+                        <p><b>photosize:</b>{{p.photosize}}</p>
+                        <p><b>photoprice:</b>{{p.photoprice}}</p> 
                          
-                     </tr>
-                     <tr *ngFor="let p of photoall index as i">
-                        <td>{{i+1}}</td>
-                        <td>{{p.photosize}}</td>
-                        <td>{{p.photoprice}}</td> 
-                     </tr>
-                         
-                     </table>
              </div>
          </div>
          

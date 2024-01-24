@@ -1,48 +1,20 @@
 <div class="container">
     <div class="row">
-     <div class="col-sm-5 text-center " style="margin: auto;">
-         <div class="card" style="margin: auto;">
-             <div class="mt-3">
-                <tr>
-                    <!-- <th>s.no</th> -->
-                    <th>firstname</th>
-                    <th>lastname</th>
-                    <th>email</th>
-                    <th>mobileno</th>
-                    <th>address</th>
-                </tr>
-                
-                <tr *ngFor=" let alldata of alluser">
-                        <!-- <td>{{alldata._id}}</td> -->
-                        <td>{{alldata.firstname}}</td>
-                        <td>{{alldata.lastname}}</td>
-                        <td>{{alldata.email}}</td>
-                        <td>{{alldata.mobileno}}</td>
-                        <td>{{alldata.address}}</td>
-                    </tr>
-                    
-                 <!-- <table class="table text-center">
-                     <tr>
-                    <th>s.no</th>
-                    <th>firstname</th>
-                    <th>lastname</th>
-                    <th>email</th>
-                    <th>photono</th>
-                    <th>address</th>
-                         
-                     </tr>
-                     <tr>
-                         
-                     </tr>
-                         
-                     </table> -->
-             </div>
-         </div>
-         
-     </div>
-    </div> 
- </div>
- 
- 
- 
- 
+        <div class="col-sm-4 text-center mt-5" *ngFor="let alldata of alluser index as i ">
+            <div class="card mb-4">
+
+                <div class="card-body">
+                    <p>{{i+1}}</p>
+                    <p><b>firstname:</b>{{alldata.firstname}}</p>
+                    <p><b>lastname:</b>{{alldata.lastname}}</p>
+                    <p><b>email:</b>{{alldata.email}}</p>
+                    <p><b>mobileno:</b>{{alldata.mobileno}}</p>
+                    <p><b>address:</b>{{alldata.address}}</p>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

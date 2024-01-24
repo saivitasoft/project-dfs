@@ -1,68 +1,65 @@
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-4" style="margin-top:80px;margin-left:450px;">
-          <form [formGroup]="uploaddata">
-            <div class="card">
-               <div class="card-header" style="text-align: center;font-size:25px;"><b>upload</b></div>
-               <div class="card-body">
-                  <div class="row" *ngFor="let p of photos" >
-                   <div class="col-sm-6">
-                       <div class="form-floating mb-3 mt-3">
-                        <select name="size" id="size" class="form-control border-0" formControlName="photosize" (change)="selected($event)">
-                          <option *ngFor="let p of photos" value="{{p.photosize}}">{{p.photosize}}</option>
-                        </select>
-                        <label for=""><b>photosize</b></label>
-                         </div>
-                   </div>
-                   <div class="col-sm-6">
-                       <div class="form-floating mb-3 mt-3">
-                           <input type="number" class="form-control border-0"   formControlName="photoprice"        placeholder="Enterlastname" name="Lastname">
-                           <label for=""><b>{{p.photoprice}}</b></label>
-                         </div>
-                   </div>
-                  </div> 
-                  <div class="row">
-                   <div class="col-sm-6">
-                       <div class="form-floating mb-3 mt-3">
-                           <input type="number" class="form-control border-0"  formControlName="noofcopiece"         placeholder="Entermobileno" name="mobileno">
-                           <label for=""><b>noofcopiece</b></label>
-                         </div>
-                   </div>
-                   <div class="col-sm-6">
-                       <div class="form-floating mb-3 mt-3">
-                           <input type="number" class="form-control border-0"  formControlName="totalamount"         placeholder="Enter email" name="email">
-                           <label for=""><b>totalamount</b></label>
-                         </div>
-                   </div>
-                  </div>
-                  <div class="row">
-                   <div class="col-sm-6">
-                       <div class="form-floating mb-3 mt-3">
-                           <input type="file" class="form-control border-0" placeholder="Address" formControlName="image">
-                           <label for=""><b>photo</b></label>
-                         </div>
-                   </div>
-                  </div>  
-                  <div class="" style="text-align: center;">
+  <div class="row">
+    <div class="col-sm-4" style="margin-top:80px;margin-left:450px;">
+      <form [formGroup]="uploaddata">
+        <div class="card">
+          <div class="card-header" style="text-align: center;font-size:25px;"><b>upload</b></div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-floating mb-3 mt-3">
+                  <select name="size" id="size" class="form-control border-0" formControlName="photosize"
+                    (change)="selected($event)">
+                    <option *ngFor="let p of photos" value="{{p.photosize}}">{{p.photosize}}</option>
+                  </select>
+                  <label for=""><b>photosize</b></label>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-floating mb-3 mt-3">
+                  <input type="number" class="form-control border-0" formControlName="photoprice" placeholder=""
+                    name="">
+                  <label for=""><b>photoprice</b></label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-floating mb-3 mt-3">
+                  <input type="number" class="form-control border-0" formControlName="noofcopiece" placeholder=""
+                    name="" (change)="calculate($event)">
+                  <label for=""><b>noofcopiece</b></label>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-floating mb-3 mt-3">
+                  <input type="number" class="form-control border-0" formControlName="totalamount" placeholder=""
+                    name="">
+                  <label for=""><b>totalamount</b></label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-floating mb-3 mt-3">
+                  <input type="file" class="form-control border-0" placeholder="" formControlName="image">
+                  <!-- (click)="selectedphoto($event)" -->
+                  <label for=""><b>photo</b></label>
+                </div>
+              </div>
+            </div>
+            <div class="" style="text-align: center;">
 
-                    <button type="button" class="btn btn-primary ms-auto w-25"(click)="upload()" >update</button>
-                        
+              <button type="button" class="btn btn-primary ms-auto w-25" (click)="upload()">upload</button>
 
-                  </div>
-       
-                     
-               </div>
-            </div> 
-          </form>  
-           </div>
+
+            </div>
+
+
+          </div>
+        </div>
+      </form>
     </div>
-    
+  </div>
+
 </div>
-
-
-
-    
-    
-
-
- 

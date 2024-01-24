@@ -23,8 +23,19 @@ constructor(private api:DfsService, private form:FormBuilder,private route: Rout
   userslogin(){
     this.api.userlogin(this.userlogin.value).subscribe((res:any)=>{
       console.log(res);
+      localStorage.setItem('id',res._id)
+
+      if(res){
+        alert('login successfull')
+        
+        this.route.navigate(['/userhome'])
+
+      }
+      else{
+        alert('login not successfull')
+      }
+       
       
-     this.route.navigate(['/userhome'])
     })
   }
 
